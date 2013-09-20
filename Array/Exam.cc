@@ -201,6 +201,18 @@ void PrintCntiousSeq(int N)
         }
 }
 
+
+// 用递归的方法判断一个整数数组是否是升序排列的
+bool IsArrAscending(int *Arr,int Len)
+{
+        if(!Len)
+                return true;
+        if(Arr[0]<=Arr[1] && IsArrAscending(Arr+1,Len-1))
+                return true;
+        else
+                return false;
+}
+
 int main()
 {
         //int Arr[]={1,2,3,4,55,5,2,5,5,5,4,6,6,2,5,0};
@@ -224,10 +236,17 @@ int main()
         //
         //PrintCntiousSeq(15);
         //
+
+        /**************************************
         int Arr[]={1,1,2,3,3,4,4,5,6,6,8,9,9};
         int a=0,b=0,c=0;
         FindOnlyThreeNum(Arr,sizeof(Arr)/sizeof(int),&a,&b,&c);
         cout<<"The Three num is :"<<a<<'\t'<<b<<'\t'<<c<<endl;
+        **************************************/
+
+        int Arr[]={1,1,2,3,3,4,4,7,5,6,6,8,9,9};
+        cout<<"is Arr Ascending?"<<boolalpha<<IsArrAscending(Arr,sizeof(Arr)/sizeof(int))<<endl;
+
 
         return 0;
 }
