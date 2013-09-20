@@ -1,0 +1,7 @@
+bubble  11422
+merge    15
+choosen   5141
+insert   6250
+¸ë³²	0
+heap        16
+quick       16
